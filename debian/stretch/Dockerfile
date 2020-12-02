@@ -1,5 +1,6 @@
 FROM debian:stretch
 
+
 WORKDIR /root
 
 RUN apt-get update && \

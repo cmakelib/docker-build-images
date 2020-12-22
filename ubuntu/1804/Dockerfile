@@ -8,12 +8,14 @@ RUN apt-get update && \
 	apt-get -y install libssl-dev libcurl4-openssl-dev gettext zlib1g-dev libexpat1-dev && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN wget https://github.com/git/git/archive/v2.20.0.tar.gz -O git.tar.gz && \
+# Install newer git because Github.
+# We need 'origin' initialized otherwise tests will not work
+RUN wget https://github.com/git/git/archive/v2.29.2.tar.gz -O git.tar.gz && \
 	tar -xf git.tar.gz && \
 	cd git-* && \
 	make prefix=/usr/local all -j 4 && \
 	make prefix=/usr/local install
 
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.5/cmake-3.18.5-Linux-x86_64.sh && \
-    chmod +x cmake-3.18.5-Linux-x86_64.sh && \
-    ./cmake-3.18.5-Linux-x86_64.sh --skip-license --prefix=/usr/local
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.19.2/cmake-3.19.2-Linux-x86_64.sh && \
+    chmod +x cmake-3.19.2-Linux-x86_64.sh && \
+    ./cmake-3.19.2-Linux-x86_64.sh --skip-license --prefix=/usr/local

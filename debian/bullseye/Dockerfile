@@ -1,5 +1,4 @@
-FROM debian:stretch
-
+FROM debian:bullseye
 
 WORKDIR /root
 

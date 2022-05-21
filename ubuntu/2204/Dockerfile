@@ -1,10 +1,10 @@
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 WORKDIR /root
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-	apt-get -y install git p7zip-full wget && \
+	apt-get -y install git p7zip-full wget lsb-release coreutils && \
 	rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.18.5/cmake-3.18.5-Linux-x86_64.sh && \

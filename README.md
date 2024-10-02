@@ -11,3 +11,7 @@ For Debian Buster the image name is test_debian:buster and URI is ghcr.io/cmakel
 To build/push new images use {build|push}_image.sh
 
 [Github Docker Packages]: https://github.com/orgs/cmakelib/packages
+
+## License
+
+MIT

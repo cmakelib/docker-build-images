@@ -3,8 +3,11 @@
 
 Build images used as a test environment for Linux builds.
 
-Images are stored on Docker HUB as [koudis/cmakelib-build-linux].
+Images are stored as packages in [Github Docker Packages].
 
-Each container name corresponds to Docker HUB tag.
+Images are named as test_\<distro_name>:\<version>.
+For Debian Buster the image name is test_debian:buster and URI is ghcr.io/cmakelib/test_debian:buster
 
-[koudis/cmakelib-build-linux]: https://hub.docker.com/repository/docker/koudis/cmakelib-build-linux
+To build/push new images use {build|push}_image.sh
+
+[Github Docker Packages]: https://github.com/orgs/cmakelib/packages
